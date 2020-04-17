@@ -1,0 +1,42 @@
+{
+  "env": {
+    "MONGO_URI": "mongodb+srv://hamed4000:hamed4000@cluster0-dwoxy.mongodb.net/test?retryWrites=true&w=majority",
+    "SESSION_SECRET": "qEh5)UG/u92+6z"
+  },
+  "builds": [
+    {
+      "src": "./server/routes/**/*.js",
+      "use": "@now/node-server"
+    },
+    {
+      "src": "./package.json",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/routes/",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "headers": { "cache-control": "public, max-age=0, must-revalidate" }
+    },
+    {
+      "src": "/(.*\\.(js|json|css|ico|png)$)",
+      "dest": "/$1",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" }
+    },
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable" }
+    }
+  ],
+  "version": 2
+}

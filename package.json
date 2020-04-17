@@ -1,0 +1,49 @@
+{
+  "name": "socialapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "build": "next build",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "next": "9.3.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "@material-ui/core": "^4.9.8",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.47",
+    "axios": "^0.19.2",
+    "compression": "^1.7.4",
+    "connect-mongo": "^3.2.0",
+    "date-fns": "^2.11.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "formik": "^2.1.4",
+    "framer-motion": "^1.10.3",
+    "helmet": "^3.22.0",
+    "jimp": "^0.9.6",
+    "mongoose": "^5.9.6",
+    "mongoose-mongodb-errors": "^0.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "next-redux-wrapper": "^5.0.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "react-redux": "^7.2.0",
+    "react-spinners": "^0.8.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "validator": "^13.0.0",
+    "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
